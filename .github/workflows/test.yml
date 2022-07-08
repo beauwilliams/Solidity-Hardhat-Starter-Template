@@ -26,4 +26,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npx hardhat compile
-    - run: npx hardhat test test/Token.test.ts
+    - run: npx hardhat test test/token.test.ts
