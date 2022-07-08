@@ -17,4 +17,4 @@ node:
 format:
 	npx prettier --write 'contracts/**/*.sol'
 audit:
-	slither .
+	npx hardhat audit
