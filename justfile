@@ -11,7 +11,7 @@ deploy-testnet:
 verify-testnet:
 	npx hardhat run scripts/verify.ts --network goerli
 test:
-	npx hardhat test test/Token.test.ts
+	npx nyc hardhat test
 node:
 	npx hardhat node
 format:
