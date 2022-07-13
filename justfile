@@ -11,7 +11,7 @@ deploy-testnet:
 verify-testnet:
 	npx hardhat run scripts/verify.ts --network goerli
 test:
-	npx nyc hardhat test
+	npx hardhat test && just print-gas-usage && npx nyc hardhat coverage
 node:
 	npx hardhat node
 format:
