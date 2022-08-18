@@ -31,32 +31,27 @@ NEWLINE := "\n"
 default:
     @#This recipe will be the default if you run just without an argument, e.g list out available commands
     @just --list --unsorted --list-heading $'{{BOLD}}{{GREEN}}Available recipes:{{NEWLINE}}{{RESET}}'
-hello:
-    @#Hide the recipe being run in the output using an @ symbol
-    @#Here we use our hidden helper to prettify the text
-    @just _bold_squares "{{YELLOW}}Hello World!"
-display:
-    #By default it prints the recipe that was run in output before outputting result
-    echo -e "Hello World! {{UNDERLINE}}Here we see the recipe that was run printed also by omitting @ in front of recipe"
 install *PACKAGES:
    @npm install {{PACKAGES}}
 compile:
-	npx hardhat compile
+	@npm run compile
 deploy-localhost:
-	npx hardhat run scripts/deploy.ts --network localhost
+	@npm run deploy-localhost
 deploy-testnet:
-	npx hardhat run scripts/deploy.ts --network goerli
+	@npm run deploy-testnet
 verify-testnet:
-	npx hardhat run scripts/verify.ts --network goerli
+	@npm run verify-testnet
 test:
-	npx hardhat test && npx hardhat coverage && just print-gas-usage
-node:
-	npx hardhat node
+	@npm run test
+lint:
+	@npm run lint
+start-local-blockchain:
+	@npm run node
 format:
-	npx prettier --write 'contracts/**/*.sol'
+	@npm run format
 audit:
-	npx hardhat audit
+	@npm run audit
 print-audit:
-	cat ./reports/slither-security-audit.md
+	@npm run print-audit
 print-gas-usage:
-	cat ./reports/hardhat-gas-usage-report.md
+	@npm run print-gas-usage

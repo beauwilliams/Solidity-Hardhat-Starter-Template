@@ -6,7 +6,7 @@
     "deploy-localhost": "npx hardhat run scripts/deploy.ts --network localhost",
     "deploy-testnet": "npx hardhat run scripts/deploy.ts --network goerli",
     "verify-testnet": "npx hardhat run scripts/verify.ts --network goerli",
-    "test": "npx hardhat test && npx hardhat coverage && cat ./reports/hardhat-gas-usage-report.md",
+    "test": "npx hardhat test && npx hardhat coverage && npm run print-gas-usage",
     "node": "npx hardhat node",
     "format": "npx prettier --write 'contracts/**/*.sol'",
     "audit": "npx hardhat audit",
