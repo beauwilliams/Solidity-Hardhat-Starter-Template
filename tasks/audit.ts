@@ -13,7 +13,7 @@ task("audit", "Runs an internal audit using Slither").setAction(async () => {
   console.log(child.stderr);
   var dir = "./reports";
 
-  //NOTE: make audit/ dir if not exist already
+  //NOTE: make report/ dir if not exist already
   if (!existsSync(dir)) {
     mkdirSync(dir);
   }
