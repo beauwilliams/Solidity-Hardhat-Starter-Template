@@ -18,21 +18,21 @@ contracts/access-upgradeable/AuthUpgradeable.sol#L63
 Impact: Informational
 Confidence: High
  - [ ] ID-1
-Pragma version[>=0.7.0](contracts/token-upgradeable/TokenUpgradeableV2.sol#L2) allows old versions
+Pragma version[>=0.8.0](contracts/token-upgradeable/TokenUpgradeableV2.sol#L2) allows old versions
 
 contracts/token-upgradeable/TokenUpgradeableV2.sol#L2
 
 
  - [ ] ID-2
-Pragma version[>=0.7.0](contracts/access-upgradeable/AuthUpgradeable.sol#L2) allows old versions
+Pragma version[>=0.8.0](contracts/token-upgradeable/TokenUpgradeable.sol#L2) allows old versions
 
-contracts/access-upgradeable/AuthUpgradeable.sol#L2
+contracts/token-upgradeable/TokenUpgradeable.sol#L2
 
 
  - [ ] ID-3
-Pragma version[>=0.7.0](contracts/token-upgradeable/TokenUpgradeable.sol#L2) allows old versions
+Pragma version[>=0.8.0](contracts/access-upgradeable/AuthUpgradeable.sol#L2) allows old versions
 
-contracts/token-upgradeable/TokenUpgradeable.sol#L2
+contracts/access-upgradeable/AuthUpgradeable.sol#L2
 
 
  - [ ] ID-4

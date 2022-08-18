@@ -6,12 +6,12 @@
     "deploy-localhost": "npx hardhat run scripts/deploy.ts --network localhost",
     "deploy-testnet": "npx hardhat run scripts/deploy.ts --network goerli",
     "verify-testnet": "npx hardhat run scripts/verify.ts --network goerli",
-    "test": "npx hardhat test && npm run print-gas-usage && npx nyc hardhat coverage",
+    "test": "npx hardhat test && npx hardhat coverage && cat ./reports/hardhat-gas-usage-report.md",
     "node": "npx hardhat node",
     "format": "npx prettier --write 'contracts/**/*.sol'",
     "audit": "npx hardhat audit",
-    "print-audit": "cat ./audit/audit.md",
-    "print-gas-usage": "cat gasUsageReport.md"
+    "print-audit": "cat ./reports/slither-security-audit.md",
+    "print-gas-usage": "cat ./reports/hardhat-gas-usage-report.md"
   },
   "husky": {
     "hooks": {

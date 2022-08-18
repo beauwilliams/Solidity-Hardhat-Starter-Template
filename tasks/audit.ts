@@ -17,5 +17,5 @@ task("audit", "Runs an internal audit using Slither").setAction(async () => {
   if (!existsSync(dir)) {
     mkdirSync(dir);
   }
-  writeFileSync("audit/audit.md", child.stdout);
+  writeFileSync("reports/slither-security-audit.md", child.stdout);
 });

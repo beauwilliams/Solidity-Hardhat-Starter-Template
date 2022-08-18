@@ -113,7 +113,7 @@ const config: HardhatUserConfig = {
     enabled: process.env.REPORT_GAS ? true : false,
     excludeContracts: [],
     src: "./contracts/*",
-    outputFile: "./gasUsageReport.md",
+    outputFile: "./reports/hardhat-gas-usage-report.md",
     token: process.env.REPORT_GAS ? "ETH" : undefined,
   },
   etherscan: {
