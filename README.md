@@ -14,6 +14,9 @@ For faster runs of your tests and scripts, consider skipping ts-node's type chec
 ERROR ON COMMIT -> `husky > pre-commit hook failed (add --no-verify to bypass)`
 RESOLUTION -> Remove errors from your smart contracts, found running `npm run lint`, or commit using --no-amend flag to temporarily bypass.
 
+## Error running audit task
+Ensure [Slither](https://github.com/crytic/slither) is installed and in your $PATH
+
 ## DEMO
 
 ![demo](https://i.ibb.co/tY00DR0/Screen-Shot-2022-07-13-at-1-57-15-pm.png)
