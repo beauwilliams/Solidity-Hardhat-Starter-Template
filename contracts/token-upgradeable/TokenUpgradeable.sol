@@ -13,12 +13,16 @@ import "../access-upgradeable/AuthUpgradeable.sol";
  * @dev Smart contract for Token
  */
 
-
-contract TokenUpgradeable is Initializable, UUPSUpgradeable, ERC20Upgradeable, AuthUpgradeable {
-    function initialize() initializer public {
-      __UUPSUpgradeable_init();
-      __AuthUpgradeable_init();
-      __ERC20_init("TokenUpgradeable", "TKU");
+contract TokenUpgradeable is
+    Initializable,
+    UUPSUpgradeable,
+    ERC20Upgradeable,
+    AuthUpgradeable
+{
+    function initialize() public initializer {
+        __UUPSUpgradeable_init();
+        __AuthUpgradeable_init();
+        __ERC20_init("TokenUpgradeable", "TKU");
         _mint(_msgSender(), 1000000000);
     }
 

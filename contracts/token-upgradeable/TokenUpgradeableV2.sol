@@ -12,18 +12,21 @@ import "../access-upgradeable/AuthUpgradeable.sol";
  * @dev Smart contract for Token
  */
 
-
-contract TokenUpgradeableV2 is Initializable, UUPSUpgradeable, ERC20Upgradeable, AuthUpgradeable {
-    function initialize() initializer public {
-      __UUPSUpgradeable_init();
-      __AuthUpgradeable_init();
-      __ERC20_init("TokenUpgradeable", "TKU");
+contract TokenUpgradeableV2 is
+    Initializable,
+    UUPSUpgradeable,
+    ERC20Upgradeable,
+    AuthUpgradeable
+{
+    function initialize() public initializer {
+        __UUPSUpgradeable_init();
+        __AuthUpgradeable_init();
+        __ERC20_init("TokenUpgradeable", "TKU");
     }
 
     function _authorizeUpgrade(address) internal override authorised {}
 
-
-    function exampleUpgrade() external view authorised returns(string memory)  {
+    function exampleUpgrade() external view authorised returns (string memory) {
         return "upgraded";
     }
 }

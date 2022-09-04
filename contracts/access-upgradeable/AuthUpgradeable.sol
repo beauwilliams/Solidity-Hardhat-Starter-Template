@@ -11,35 +11,41 @@ import "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol";
  * @dev Smart contract for Auth controls
  */
 
-abstract contract AuthUpgradeable is Initializable, UUPSUpgradeable, ContextUpgradeable {
+abstract contract AuthUpgradeable is
+    Initializable,
+    UUPSUpgradeable,
+    ContextUpgradeable
+{
     address owner;
-    mapping (address => bool) private authorisations;
+    mapping(address => bool) private authorisations;
 
     /**
-    * @dev Initializes the contract setting the deployer as the initial owner.
-    */
+     * @dev Initializes the contract setting the deployer as the initial owner.
+     */
     function __AuthUpgradeable_init() internal onlyInitializing {
         __AuthUpgradeable_init_unchained();
     }
 
     /**
-    * @dev See: https://docs.openzeppelin.com/contracts/4.x/upgradeable#multiple-inheritance
-    */
+     * @dev See: https://docs.openzeppelin.com/contracts/4.x/upgradeable#multiple-inheritance
+     */
     function __AuthUpgradeable_init_unchained() internal onlyInitializing {
         //NOTE: We use _msgSender() function to retreive contract owner address because
         //msg.sender variable will refer to the proxy contract address when deploying upgrades
         //the ContextUpgradable dependency is added to import the _msgSender() function
         owner = _msgSender();
         authorisations[_msgSender()] = true;
-      __UUPSUpgradeable_init();
+        __UUPSUpgradeable_init();
     }
 
     modifier onlyOwner() {
-        require(isOwner(_msgSender())); _;
+        require(isOwner(_msgSender()));
+        _;
     }
 
     modifier authorised() {
-        require(isAuthorised(_msgSender())); _;
+        require(isAuthorised(_msgSender()));
+        _;
     }
 
     function authorise(address _address) public onlyOwner {
@@ -72,7 +78,6 @@ abstract contract AuthUpgradeable is Initializable, UUPSUpgradeable, ContextUpgr
     event OwnershipTransferred(address oldOwner, address newOwner);
     event Authorised(address _address);
     event Unauthorised(address _address);
-
 
     /**
      * @dev This empty reserved space is put in place to allow future versions to add new
