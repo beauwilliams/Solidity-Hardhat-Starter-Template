@@ -15,7 +15,7 @@ async function main() {
 
 import * as fs from "fs";
 const { ethers, upgrades } = require("hardhat");
-import { BOX_DEPLOYMENT_ADDRESS } from '../cache/deploy';
+import { BOX_DEPLOYMENT_ADDRESS } from '../deployments/deploy';
 
 async function main() {
   const CONTRACT_NAME = "BoxV2"
@@ -24,12 +24,12 @@ async function main() {
   console.log((await upgraded.area()).toString());
   console.log((await upgraded.perimeter()).toString());
 
-  console.log("saving upgraded deployment details to cache/deploy.ts");
+  console.log("saving upgraded deployment details to deployments/deploy.ts");
   let deployments = `
   export const BOX_DEPLOYMENT_ADDRESS = "${upgraded.address}"
   `;
   let data = JSON.stringify(deployments);
-  fs.writeFileSync("cache/deploy.ts", JSON.parse(data));
+  fs.writeFileSync("deployments/deploy.ts", JSON.parse(data));
 
 }
 
@@ -50,7 +50,7 @@ main()
 
 
 import { ethers, upgrades } from 'hardhat';
-import { tokenaddress } from '../cache/deploy';
+import { tokenaddress } from '../deployments/deploy';
 
 //Specify the existing address of the contract you wish to upgrade here
 const CONTRACT_ADDRESS = tokenaddress;

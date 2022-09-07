@@ -1,5 +1,5 @@
 /* import { run } from "hardhat";
-import { BOX_DEPLOYMENT_ADDRESS } from '../cache/deploy';
+import { BOX_DEPLOYMENT_ADDRESS } from '../deployments/deploy';
 
 
 
@@ -25,7 +25,7 @@ main().catch((error) => {
 }); */
 
 import { run } from "hardhat";
-import { tokenaddress } from '../cache/deploy';
+import { tokenaddress } from '../deployments/deploy';
 
 
 

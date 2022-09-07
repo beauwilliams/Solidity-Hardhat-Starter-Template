@@ -8,12 +8,12 @@ async function main() {
 
   console.log("Box deployed to " + box.address);
 
-  console.log("saving deployment details to cache/deploy.ts");
+  console.log("saving deployment details to deployments/deploy.ts");
   let deployments = `
   export const BOX_DEPLOYMENT_ADDRESS = "${box.address}"
   `;
   let data = JSON.stringify(deployments);
-  fs.writeFileSync("cache/deploy.ts", JSON.parse(data));
+  fs.writeFileSync("deployments/deploy.ts", JSON.parse(data));
 }
 
 main().catch(error => {
@@ -30,13 +30,13 @@ async function main() {
   await token.deployed();
   console.log(`token contract deployed to ${token.address}`)
 
-  console.log('saving contract addresses to cache/deploy.ts');
+  console.log('saving contract addresses to deployments/deploy.ts');
   let deployments = `
   export const tokenaddress = "${token.address}"
   `
 
   let data = JSON.stringify(deployments)
-  fs.writeFileSync('cache/deploy.ts', JSON.parse(data))
+  fs.writeFileSync('deployments/deploy.ts', JSON.parse(data))
 }
 
 // We recommend this pattern to be able to use async/await everywhere
