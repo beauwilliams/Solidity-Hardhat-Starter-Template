@@ -56,6 +56,8 @@ print-audit:
 	@npm run print-audit
 print-gas-usage:
 	@npm run print-gas-usage
+print-deployments:
+	@cat deployments/deploy.ts
 clean:
     @just _bold_red "WARNING: this operation will delete the contracts, caches etc and reset this repo to a blank state for starting a new solidity project. This operation can't be undone."
     @just _bold_red "Would you like to proceed?"
