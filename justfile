@@ -32,7 +32,9 @@ default:
     @#This recipe will be the default if you run just without an argument, e.g list out available commands
     @just --list --unsorted --list-heading $'{{BOLD}}{{GREEN}}Available recipes:{{NEWLINE}}{{RESET}}'
 install *PACKAGES:
-   @npm install {{PACKAGES}}
+	@npm install {{PACKAGES}}
+update:
+	@npm update
 compile:
 	@npm run compile
 deploy-localhost:
