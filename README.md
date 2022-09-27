@@ -4,6 +4,40 @@
 
 Includes deployment configurations, testing framework, contract upgrades pattern, gas usage report, security analysys audit, test coverage report.. did I also mention it's blazingly fast 😏
 
+## GET STARTED
+
+This project uses a [task runner called just, for convenience](https://github.com/casey/just)
+
+```
+Available recipes:
+    default
+    install *PACKAGES
+    update
+    compile
+    deploy-localhost
+    deploy-testnet
+    verify-testnet
+    test
+    lint
+    start
+    format
+    audit
+    print-audit
+    print-gas-usage
+    print-deployments
+    clean
+```
+
+### Running tests
+
+Run the tests with `just test`
+
+### Starting a new project from this template
+
+- Clean the workspace (to start a new project, removing example code and scripts) using `just clean` 
+- Create your solidity code in /contracts, tests in /test and deploy/berify scripts in /scripts
+
+
 ## FAQ
 
 ### Performance optimizations
