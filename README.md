@@ -42,6 +42,13 @@ Available recipes:
 
 ## FAQ
 
+### Error compiling contracts on freshly cloned repo
+
+`Error HH12: Trying to use a non-local installation of Hardhat, which is not supported.
+Please install Hardhat locally using npm or Yarn, and try again.`
+
+Run `npm i` to fix this error which will install hardhat
+
 ### Performance optimizations
 For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable TS_NODE_TRANSPILE_ONLY to 1 in hardhat's environment. For more details see the documentation.
 
@@ -52,7 +59,7 @@ ERROR ON COMMIT -> `husky > pre-commit hook failed (add --no-verify to bypass)`
 RESOLUTION -> Remove errors from your smart contracts, found running `npm run lint`, or commit using --no-amend flag to temporarily bypass.
 
 
-## Error running audit task
+### Error running audit task
 Ensure [Slither](https://github.com/crytic/slither) is installed and in your $PATH
 
 ## DEMO
