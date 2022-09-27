@@ -28,14 +28,16 @@ Available recipes:
     clean
 ```
 
-### Running tests
+### Running tests and audits
 
-Run the tests with `just test`
+- Run the unit tests with `just test`
+- Statically analyse code for vulnerabilities with `just audit` 
+
 
 ### Starting a new project from this template
 
 - Clean the workspace (to start a new project, removing example code and scripts) using `just clean` 
-- Create your solidity code in /contracts, tests in /test and deploy/berify scripts in /scripts
+- Create your solidity code in `/contracts`, tests in `/test` and deploy/verify scripts in `/scripts`
 
 
 ## FAQ
@@ -43,10 +45,12 @@ Run the tests with `just test`
 ### Performance optimizations
 For faster runs of your tests and scripts, consider skipping ts-node's type checking by setting the environment variable TS_NODE_TRANSPILE_ONLY to 1 in hardhat's environment. For more details see the documentation.
 
+
 ### Husky
 
 ERROR ON COMMIT -> `husky > pre-commit hook failed (add --no-verify to bypass)`
 RESOLUTION -> Remove errors from your smart contracts, found running `npm run lint`, or commit using --no-amend flag to temporarily bypass.
+
 
 ## Error running audit task
 Ensure [Slither](https://github.com/crytic/slither) is installed and in your $PATH
