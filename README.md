@@ -65,3 +65,7 @@ Ensure [Slither](https://github.com/crytic/slither) is installed and in your $PA
 ## DEMO
 
 ![demo](https://i.ibb.co/tY00DR0/Screen-Shot-2022-07-13-at-1-57-15-pm.png)
+
+## TODO
+
+- [ ] Fix prettier plugin sol hint not working nvim (Remove prettier plugin from sol hint.son to fix)
