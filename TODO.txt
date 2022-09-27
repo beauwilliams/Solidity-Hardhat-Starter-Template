@@ -1,1 +1,0 @@
-- [ ] Fix prettier plugin sol hint not working nvim (Remove prettier plugin from sol hint.son to fix)
