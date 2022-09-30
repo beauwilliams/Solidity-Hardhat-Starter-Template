@@ -8,7 +8,7 @@ select yn in "Yes" "No"; do
   esac
 done
 
-echo "Would you like to install pakages? It is required to compile contracts that hardhat is installed locally via npm install"
+echo "Would you like to install npm packages? It is required to compile contracts that hardhat is installed locally"
 select yn in "Yes" "No"; do
   case $yn in
     Yes ) npm install && exit;;
