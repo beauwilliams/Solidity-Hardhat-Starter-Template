@@ -1,3 +1,4 @@
+// NOTE: Use me to get the nonces for deterministic deployments. A wallet needs nonces on all chains equal to get the same deployment address on each
 import { task } from "hardhat/config";
 import { createAlchemyWeb3 } from "@alch/alchemy-web3"
 import { config as dotEnvConfig } from "dotenv";
