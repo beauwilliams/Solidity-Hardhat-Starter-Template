@@ -37,6 +37,9 @@ update:
 	@npm update
 compile:
 	@npm run compile
+compile-watch:
+    @just _bold_red "Watching for changes to contracts and auto-compiling"
+    @npm run compile-watch
 deploy-localhost:
 	@npm run deploy-localhost
 deploy-testnet:
@@ -45,6 +48,9 @@ verify-testnet:
 	@npm run verify-testnet
 test:
 	@npm run test
+test-watch:
+    @just _bold_red "Watching for changes to tests and auto-testing"
+    @npm run test-watch
 lint:
 	@npm run lint
 start:
