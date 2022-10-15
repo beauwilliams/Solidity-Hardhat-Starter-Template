@@ -14,10 +14,12 @@ Available recipes:
     install *PACKAGES
     update
     compile
+    compile-watch
     deploy-localhost
     deploy-testnet
     verify-testnet
     test
+    test-watch
     lint
     start
     format
@@ -31,12 +33,12 @@ Available recipes:
 ### Running tests and audits
 
 - Run the unit tests with `just test`
-- Statically analyse code for vulnerabilities with `just audit` 
+- Statically analyse code for vulnerabilities with `just audit`
 
 
 ### Starting a new project from this template
 
-- Clean the workspace (to start a new project, removing example code and scripts) using `just clean` 
+- Clean the workspace (to start a new project, removing example code and scripts) using `just clean`
 - Create your solidity code in `/contracts`, tests in `/test` and deploy/verify scripts in `/scripts`
 
 
