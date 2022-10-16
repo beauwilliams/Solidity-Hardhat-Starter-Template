@@ -42,6 +42,13 @@ Available recipes:
 - Create your solidity code in `/contracts`, tests in `/test` and deploy/verify scripts in `/scripts`
 
 
+## Available Tasks
+
+See `./tasks/index.ts` to view available tasks and enable them.
+
+Some might require a little configuration
+
+
 ## FAQ
 
 ### Error compiling contracts on freshly cloned repo
