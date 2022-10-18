@@ -7,7 +7,7 @@
     "deploy-localhost": "hardhat run scripts/deploy.ts --network localhost",
     "deploy-testnet": "hardhat run scripts/deploy.ts --network goerli",
     "verify-testnet": "hardhat run scripts/verify.ts --network goerli",
-    "test-watch": "nodemon --watch ./test/ --exec 'npx hardhat test'",
+    "test-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat test'",
     "node": "npx hardhat node",
     "format": "npx prettier --write 'contracts/**/*.sol'",
     "audit": "hardhat audit",
