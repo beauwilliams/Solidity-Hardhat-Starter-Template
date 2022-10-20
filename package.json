@@ -2,14 +2,15 @@
   "name": "HardhatTemplate",
   "scripts": {
     "lint": "solhint -f table contracts/**/*.sol",
+    "format": "npx prettier --write 'contracts/**/*.sol'",
     "compile": "TS_NODE_TRANSPILE_ONLY=true hardhat compile",
     "compile-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat compile'",
+    "test": "npx hardhat test",
+    "test-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat test'",
+    "node": "npx hardhat node",
     "deploy-localhost": "hardhat run scripts/deploy.ts --network localhost",
     "deploy-testnet": "hardhat run scripts/deploy.ts --network goerli",
     "verify-testnet": "hardhat run scripts/verify.ts --network goerli",
-    "test-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat test'",
-    "node": "npx hardhat node",
-    "format": "npx prettier --write 'contracts/**/*.sol'",
     "audit": "hardhat audit",
     "print-audit": "cat ./reports/slither-security-audit.md",
     "print-gas-usage": "cat ./reports/hardhat-gas-usage-report.md"
