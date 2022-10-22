@@ -71,6 +71,10 @@ RESOLUTION -> Remove errors from your smart contracts, found running `npm run li
 ### Error running audit task
 Ensure [Slither](https://github.com/crytic/slither) is installed and in your $PATH
 
+## Github Code Scanning Integration
+
+<img width="992" alt="Screen Shot 2022-10-22 at 11 50 44 am" src="https://user-images.githubusercontent.com/7098556/197309070-e21acdf8-4c31-482a-919e-18d3fa649b75.png">
+
 ## DEMO
 
 ![demo](https://i.ibb.co/tY00DR0/Screen-Shot-2022-07-13-at-1-57-15-pm.png)
