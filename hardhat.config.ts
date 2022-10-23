@@ -11,6 +11,8 @@ import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "hardhat-contract-sizer";
 import 'hardhat-deploy'
+import 'hardhat-docgen';
+import 'hardhat-spdx-license-identifier';
 import "solidity-coverage";
 import "@atixlabs/hardhat-time-n-mine"; //Use me to mine blocks in dev for time based contracts
 import "./tasks" //tasks - e.g npx hardhat audit
@@ -152,6 +154,16 @@ const config: HardhatUserConfig = {
     disambiguatePaths: false,
     runOnCompile: true,
     strict: true,
+  },
+  //@dev: Auto generate docs for contracts
+    docgen: {
+    clear: true,
+    runOnCompile: false,
+  },
+  // @dev: Automatically add SPDX license identifier to all contracts based on package.json
+    spdxLicenseIdentifier: {
+    overwrite: false,
+    runOnCompile: true,
   },
 };
 
