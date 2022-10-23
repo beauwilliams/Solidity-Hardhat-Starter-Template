@@ -1,4 +1,5 @@
 {
+  "license": "BSD-4-Clause",
   "name": "HardhatTemplate",
   "scripts": {
     "lint": "solhint -f table contracts/**/*.sol",
