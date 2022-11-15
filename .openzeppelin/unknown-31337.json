@@ -3,19 +3,19 @@
   "proxies": [
     {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
-      "txHash": "0x6b3c4d8305212214fab0f558d832f1dd6e31bea431259396c9a576f8bcaada60",
+      "txHash": "0xafc3a342096f87743e44ca0a5775abd8418acc02823f84068c9e2becfdebf42e",
       "kind": "uups"
     },
     {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0",
-      "txHash": "0x6bb3bacf0f3acc8978d700c2044bd4047659f93ef219024beb530843a748a4c3",
+      "txHash": "0x1871dcc68ce94d4aacab71ef82a27b8e4f5699ac2de7a345e792a6f49345db9c",
       "kind": "uups"
     }
   ],
   "impls": {
-    "927d9ff504bb3b8b69dea084c55bac03de94ee79fac6dd07addbfd0bc1c868c3": {
-      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
-      "txHash": "0xc380bff9f8a97b96a987fe333ef30d242d1ce3a499f1323271aa02bedd04a5f1",
+    "19d2397cf40eb65a3eb411670aedbafbbfd1592953ca176d715c056cd934a6d1": {
+      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
+      "txHash": "0x3bf6eb6aeb0aab8dd6fd22d875f4100f74a3bb02db28c8e9a9422d7ddea1bce5",
       "layout": {
         "storage": [
           {
@@ -113,7 +113,7 @@
             "slot": "201",
             "type": "t_address",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:19"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:20"
           },
           {
             "label": "authorisations",
@@ -121,7 +121,7 @@
             "slot": "202",
             "type": "t_mapping(t_address,t_bool)",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:20"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:21"
           },
           {
             "label": "__gap",
@@ -129,7 +129,7 @@
             "slot": "203",
             "type": "t_array(t_uint256)49_storage",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:87"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:88"
           }
         ],
         "types": {
@@ -180,9 +180,9 @@
         }
       }
     },
-    "19d2397cf40eb65a3eb411670aedbafbbfd1592953ca176d715c056cd934a6d1": {
-      "address": "0xCf7Ed3AccA5a467e9e704C703E8D87F634fB0Fc9",
-      "txHash": "0xda21af567bcd6f7d2c254588c309d04a9df44dab8e34ac337441571fce7eb5f4",
+    "37f77daae1829b05ce12681b65cfe4ce50bea8cb1327b89b2c38d48f8ed91c5a": {
+      "address": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+      "txHash": "0xe895028e351cab21ea590af6a237eb51a98bc39d13eccbb724ebb9f4df2745ff",
       "layout": {
         "storage": [
           {
@@ -280,7 +280,7 @@
             "slot": "201",
             "type": "t_address",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:19"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:20"
           },
           {
             "label": "authorisations",
@@ -288,7 +288,7 @@
             "slot": "202",
             "type": "t_mapping(t_address,t_bool)",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:20"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:21"
           },
           {
             "label": "__gap",
@@ -296,7 +296,7 @@
             "slot": "203",
             "type": "t_array(t_uint256)49_storage",
             "contract": "AuthUpgradeable",
-            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:87"
+            "src": "contracts/access-upgradeable/AuthUpgradeable.sol:88"
           }
         ],
         "types": {

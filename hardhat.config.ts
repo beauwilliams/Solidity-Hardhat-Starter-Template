@@ -1,26 +1,24 @@
-import { spawnSync } from 'child_process';
-import { writeFileSync } from 'fs';
+import { spawnSync } from "child_process";
+import { writeFileSync } from "fs";
 import { HardhatUserConfig, task } from "hardhat/config";
 import { NetworkUserConfig } from "hardhat/types";
-import "@openzeppelin/hardhat-upgrades"
+import "@openzeppelin/hardhat-upgrades";
 import "@nomiclabs/hardhat-etherscan";
 import "@nomiclabs/hardhat-waffle";
-import "@nomiclabs/hardhat-ethers"
+import "@nomiclabs/hardhat-ethers";
 import "@nomiclabs/hardhat-solhint";
 import "@typechain/hardhat";
 import "hardhat-gas-reporter";
 import "hardhat-contract-sizer";
-import 'hardhat-deploy'
-import 'hardhat-docgen';
-import 'hardhat-spdx-license-identifier';
+import "hardhat-deploy";
+import "hardhat-docgen";
+import "hardhat-spdx-license-identifier";
 import "solidity-coverage";
 import "@atixlabs/hardhat-time-n-mine"; //Use me to mine blocks in dev for time based contracts
-import "./tasks" //tasks - e.g npx hardhat audit
-
+import "./tasks"; //tasks - e.g npx hardhat audit
 
 import { config as dotEnvConfig } from "dotenv";
 dotEnvConfig();
-
 
 /* interface Etherscan {
   etherscan: { apiKey: string | undefined };
@@ -36,7 +34,8 @@ function debug(text: String) {
 } */
 
 //This well known public private key is a backup if private key env var not set
-const defaultPrivateKey = "0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3";
+const defaultPrivateKey =
+  "0xc87509a1c067bbde78beb793e6fa76530b6382a4c0241e5e4a9ec0a0f44dc0d3";
 
 const config: HardhatUserConfig = {
   solidity: {
@@ -71,11 +70,25 @@ const config: HardhatUserConfig = {
     ],
   },
   networks: {
-    localhost: {},
     hardhat: {
       accounts: {
         count: 20, // Adjust the number of accounts available when using the local Hardhat network
       },
+      initialBaseFeePerGas: 0,
+      chainId: 31337,
+      hardfork: "merge",
+      forking: {
+        url: process.env.ETH_MAINNET_URL || "",
+        // The Hardhat network will by default fork from the latest mainnet block
+        // To pin the block number, specify it below
+        // You will need access to a node with archival data for this to work!
+        // blockNumber: 14743877,
+        // If you want to do some forking, set `enabled` to true
+        enabled: false,
+      },
+    },
+    localhost: {
+      url: "http://127.0.0.1:8545",
     },
     coverage: {
       url: "http://127.0.0.1:8555", // Coverage launches its own ganache-cli client
@@ -84,31 +97,31 @@ const config: HardhatUserConfig = {
       url: process.env.ROPSTEN_RPC_URL || defaultPrivateKey,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      saveDeployments: true
+      saveDeployments: true,
     },
     goerli: {
       url: process.env.GOERLI_RPC_URL || defaultPrivateKey,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      saveDeployments: true
+      saveDeployments: true,
     },
     kovan: {
       url: process.env.KOVAN_RPC_URL || defaultPrivateKey,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      saveDeployments: true
+      saveDeployments: true,
     },
     mainnet: {
       url: process.env.MAINNET_RPC_URL || defaultPrivateKey,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      saveDeployments: true
+      saveDeployments: true,
     },
     rinkeby: {
       url: process.env.RINKEBY_RPC_URL || defaultPrivateKey,
       accounts:
         process.env.PRIVATE_KEY !== undefined ? [process.env.PRIVATE_KEY] : [],
-      saveDeployments: true
+      saveDeployments: true,
     },
     /* polygon_mumbai_testnet: {
       url: "https://speedy-nodes-nyc.moralis.io//polygon/mumbai",
@@ -156,12 +169,12 @@ const config: HardhatUserConfig = {
     strict: true,
   },
   //@dev: Auto generate docs for contracts
-    docgen: {
+  docgen: {
     clear: true,
     runOnCompile: false,
   },
   // @dev: Automatically add SPDX license identifier to all contracts based on package.json
-    spdxLicenseIdentifier: {
+  spdxLicenseIdentifier: {
     overwrite: false,
     runOnCompile: true,
   },
