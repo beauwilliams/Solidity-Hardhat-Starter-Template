@@ -6,7 +6,7 @@ import { task } from "hardhat/config";
 task("audit", "Runs an internal audit using Slither").setAction(async () => {
   const child = spawnSync(
     "slither",
-    ["--filter-paths", "node_modules", "--exclude", "naming-convention", ".", "--checklist"],
+    [".", "--checklist", "--config-file", "slither.config.json"],
     { encoding: "utf-8" },
   );
 
