@@ -5,7 +5,7 @@
     "lint": "solhint -f table contracts/**/*.sol",
     "format": "npx prettier --write 'contracts/**/*.sol'",
     "compile": "TS_NODE_TRANSPILE_ONLY=true hardhat compile",
-    "compile-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat compile'",
+    "compile-watch": "nodemon --watch ./contracts/ -e sol --exec 'TS_NODE_TRANSPILE_ONLY=true npx hardhat compile'",
     "test": "npx hardhat test",
     "test-watch": "nodemon --watch ./contracts/ -e sol --exec 'npx hardhat test'",
     "node": "npx hardhat node",
