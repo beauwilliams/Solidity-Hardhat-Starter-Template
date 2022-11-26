@@ -69,7 +69,7 @@ print-deployments:
 clean:
     @just _bold_red "WARNING: this operation will delete the contracts, caches etc and reset this repo to a blank state for starting a new solidity project. This operation can't be undone."
     @just _bold_red "Would you like to proceed?"
-    ./scripts/clean.sh
+    @./scripts/clean.sh
 
 _bold_red message:
     @#Hidden recipes have _ in front, i.e these can be helpers such as pretty printer below
