@@ -1,5 +1,6 @@
 {
   "extends": "solhint:recommended",
+  "plugins": ["prettier"],
   "rules": {
     "code-complexity": ["error", 8],
     "compiler-version": ["error", ">=0.8.0"],
@@ -8,6 +9,12 @@
     "func-visibility": ["error", { "ignoreConstructors": true }],
     "max-line-length": ["warn", 120],
     "not-rely-on-time": "warn",
-    "reason-string": ["warn", { "maxLength": 64 }]
+    "reason-string": ["warn", { "maxLength": 64 }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
   }
 }
