@@ -58,6 +58,8 @@ start:
 	@npm run node
 format:
 	@npm run format
+coverage:
+	@hardhat coverage
 audit:
 	@npm run audit
 print-audit:
